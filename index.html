@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Facebook Video Downloader">
+    <meta name="author" content="Ferry Ayunda">
+    <meta name="generator" content="Facebook Video Downloader">
+    <meta content="https://susahberak.github.io/fbdown/og.png" property="og:image">
+    <link rel="manifest" href="manifest.json">
+    <title>Facebook Video Downloader</title>
+    <meta name="theme-color" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Facebook Video Downloader">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    
+    <!-- Bootstrap core CSS -->
+<link href="asset/app.css" rel="stylesheet">
+
+    <!-- Favicons -->
+<link rel="icon" href="favicon.ico">
+<meta name="theme-color" content="#1746A2">
+
+
+    <style>
+      /* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+      main > .container {
+        padding: 60px 15px 0;
+       }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="#" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container">
+      <span class="text-muted">
+      <a class="navbar-brand" href="#">FBVIDOWN APP</a>
+      </span>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Facebook Video Downloader</h1>
+    <p class="lead">Download video Facebook langsung melalui website fbvidown.herokuapp.com</p>
+    
+    <p><div class="input-group mb-3">
+    <input id="link" type="text" class="form-control" placeholder="https://www.facebook.com/bungferry.wa/videos/773001020434010/" aria-label="https://www.facebook.com/bungferry.wa/videos/773001020434010/" aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" type="button" id="download" data-disable-with="Search" onclick="getDownloadLink();">UNDUH</button>
+    </div>
+    </p>
+
+    <div id="bar" style="display:none;">
+    <p class="text-center">Sedang memproses tautan untuk mengunduh. Tetaplah di halaman ini. <br><img src="asset/ajax.gif"></p>
+    </div>
+
+    <p>
+    <div id="result" style="display: none;" class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 id="title" class="card-title">Loading...</h5>
+    <p id="source" class="card-text">Loading...</p>
+    <p id="links" class="card-text">Loading...</p>
+    <div id="downloadUrl"></div>
+    </div>
+    </div>
+    </p>
+
+    <h1 class="mt-5">Mengapa Anda harus menggunakan FBVIDOWN</h1>
+    <p class="lead">fbvidown App adalah alat download facebook videos terbaik untuk membantu Anda Download video Facebook berkualitas tinggi: MP4 SD, MP4 HD. Unduh video Facebook ke ponsel, PC, atau tablet Anda dengan kualitas terbaik.</p>
+    <p>Gunakan download video dari Facebook kami dengan browser Anda. Tidak perlu menginstal perangkat lunak apa pun. Mendukung Android, dan iOS.</p>
+
+    <h1 class="mt-5">Cara Download video Facebook</h1>
+    <p class="lead">Download video Facebook dengan format terbaik MP4 SD, MP4 HD gratis, tanpa iklan!</p>
+
+    <h1 class="mt-5">1. Salin tautan video facebook</h1>
+    <p>Dari Facebook, salin tautan video yang ingin Anda unduh.</p>
+    <p><img src="img/01.png" class="img-fluid img-thumbnail" alt=""></p>
+    <p><img src="img/02.png" class="img-fluid img-thumbnail" alt=""></p>
+
+    <h1 class="mt-5">2. Tempel tautan video facebook</h1>
+    <p>Lalu tempel tautan tersebut di fbvidown dan klik unduh.</p>
+    <p><img src="img/03.png" class="img-fluid img-thumbnail" alt=""></p>
+
+    <h1 class="mt-5">3. Pilih kualitas video</h1>
+    <p>Pilih kualitas video yang ingin Anda unduh.</p>
+    <p><img src="img/04.png" class="img-fluid img-thumbnail" alt=""></p>
+
+    <h1 class="mt-5">4. Unduh facebook video</h1>
+    <p>Tunggu server kami memproses dan mengunduh di perangkat Anda.</p>
+    <!--<p><img src="img/04.png" class="img-fluid img-thumbnail" alt=""></p>-->
+    
+    <h1 class="mt-5">Apakah Anda memiliki pertanyaan untuk dijawab?</p>
+    <p class="lead">Silakan hubungi kami <a href="https://www.facebook.com/bungferry.wa">di sini</a>. Kami akan membalas Anda secepat mungkin.</p>
+
+  </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Copyright © 2022 <a class='text-decoration-none' href="https://www.facebook.com/bungferry.wa">Ferry Ayunda</a>.</span>
+  </div>
+</footer>
+
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="asset/app.js"></script>
+      <script>
+        /*if (window.location.protocol === 'http:') {
+            window.location.protocol = 'https:';
+        }*/
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+        }
+    </script>
+  </body>
+</html>
